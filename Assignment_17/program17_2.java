@@ -1,0 +1,60 @@
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Class Name : checkPalindrome
+//  Function Name : checkPalindrome
+//  Description :   It is used to check whether a given number is a Palindrome or not
+//  Input :         Integer
+//  Author :        Ajinkya Rajendra Ghag
+//  Date :          03-11-2025
+//
+////////////////////////////////////////////////////////////////////////////////
+
+class checkPalindrome
+{
+    void checkPalindrome(int iNo)
+    {
+        int iDigit = 0;
+        int iRev = 0;
+        int temp = iNo;
+
+        while(iNo != 0)
+        {
+            iDigit = iNo % 10;
+            iRev = (iRev * 10) + iDigit;
+            iNo = iNo / 10;
+        }
+
+        if(temp == iRev)
+        {
+            System.out.println(temp + " is a Palindrome number");
+        }
+        else
+        {
+            System.out.println(temp + " is NOT a Palindrome number");
+        }
+    }
+}
+
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Entry Point function for the application
+//
+////////////////////////////////////////////////////////////////////////////////
+
+class program17_2
+{
+    public static void main(String args[])
+    {
+        checkPalindrome obj = new checkPalindrome();
+        obj.checkPalindrome(121);
+    }
+}
+
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Testcases successfully handled by the application
+//
+//  Input : 121
+//  Output : 121 is a Palindrome number
+//
+////////////////////////////////////////////////////////////////////////////////
