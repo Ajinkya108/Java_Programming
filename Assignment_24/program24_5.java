@@ -25,30 +25,27 @@ class ArrayX
         }
     }
 
-    public void DisplayThreeDigit()
+    public void DisplaySumDigit()
     {
-        int iCnt = 0, iCal = 0, iValue = 0;
-
-        for(iCnt = 0; iCnt < iSize; iCnt++)
+        for(int i = 0; i < iSize; i++)
         {
-            iCal = Arr[iCnt];
-            
-            while(iCal == 0)
+            int temp = Arr[i];
+            int sum = 0;
+
+            temp = Math.abs(temp);  // for negative numbers
+
+            while(temp != 0)
             {
-                iCal = iCal%10;
-                if(iValue == 0)
-                {
-                    iValue++;
-                }
-                iCal = iCal/10;
+                sum += temp % 10;
+                temp = temp / 10;
             }
 
-            System.out.println(Arr[iCnt]);
+            System.out.println("Sum of digits of " + Arr[i] + " is : " + sum);
         }
     }
 
 }
-class program24_4
+class program24_5
 {
     public static void main(String A[])
     {
@@ -62,7 +59,7 @@ class program24_4
 
         aobj1.Accept();
 
-        aobj1.DisplayThreeDigit();
+        aobj1.DisplaySumDigit();
 
         sobj = null;
         aobj1 = null;

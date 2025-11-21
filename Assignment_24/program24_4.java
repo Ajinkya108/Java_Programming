@@ -27,23 +27,12 @@ class ArrayX
 
     public void DisplayThreeDigit()
     {
-        int iCnt = 0, iCal = 0, iValue = 0;
-
-        for(iCnt = 0; iCnt < iSize; iCnt++)
+        for(int i = 0; i < iSize; i++)
         {
-            iCal = Arr[iCnt];
-            
-            while(iCal == 0)
+            if( (Arr[i] >= 100 && Arr[i] <= 999) || (Arr[i] <= -100 && Arr[i] >= -999) )
             {
-                iCal = iCal%10;
-                if(iValue == 0)
-                {
-                    iValue++;
-                }
-                iCal = iCal/10;
+                System.out.println(Arr[i]);
             }
-
-            System.out.println(Arr[iCnt]);
         }
     }
 
