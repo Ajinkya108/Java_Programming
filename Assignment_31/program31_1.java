@@ -16,7 +16,7 @@ class Pattern
                 }
                 else
                 {
-                    System.out.print("#\t");
+                    System.out.print(" \t");
                 }
             }
             System.out.println();
@@ -25,7 +25,7 @@ class Pattern
     }
 }
 
-public class program30_1
+public class program31_1
 {
     public static void main(String A[])
     {

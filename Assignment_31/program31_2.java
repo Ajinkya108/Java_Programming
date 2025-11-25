@@ -6,9 +6,9 @@ class Pattern
     {
         int i = 0, j =0;
 
-        for(i = 1; i <= iRow; i++)
+        for(i = 1; i <= iRow ; i++)
         {
-            for(j = 1; j <= iCol; j++)
+            for(j = iCol; j >= 1; j--)
             {
                 if( j >= i )
                 {
@@ -16,7 +16,7 @@ class Pattern
                 }
                 else
                 {
-                    System.out.print("#\t");
+                    System.out.print(" \t");
                 }
             }
             System.out.println();
@@ -24,7 +24,7 @@ class Pattern
     }
 }
 
-public class program30_2
+public class program31_2
 {
     public static void main(String A[])
     {

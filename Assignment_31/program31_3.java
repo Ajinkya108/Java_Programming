@@ -14,6 +14,10 @@ class Pattern
                 {
                     System.out.print("$\t");
                 }
+                else if(i >= j)
+                {
+                    System.out.print("#\t");
+                }
                 else
                 {
                     System.out.print("*\t");
@@ -25,7 +29,7 @@ class Pattern
     }
 }
 
-public class program30_3
+public class program31_3
 {
     public static void main(String A[])
     {
