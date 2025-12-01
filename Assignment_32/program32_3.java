@@ -6,26 +6,25 @@ class Pattern
     {
         int i = 0, j =0;
 
-        for(i = 1; i <= iRow; i++)
+        for(i = iRow; i > 0 ; i--)
         {
-            for(j = 1; j <= iCol; j++)
+            for(j = 1; j <= iCol ; j++)
             {
-                if( i == j )
+                if( j== 1 || j == iCol || i == 1 || j == i || i == iRow)
                 {
-                    System.out.print("$\t");
+                    System.out.print("*\t");
                 }
                 else
                 {
-                    System.out.print("*\t");
+                    System.out.print(" \t");
                 }
             }
             System.out.println();
         }
-
     }
 }
 
-public class program30_3
+public class program32_3
 {
     public static void main(String A[])
     {

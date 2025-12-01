@@ -4,28 +4,29 @@ class Pattern
 {
     public void Display(int iRow, int iCol)
     {
-        int i = 0, j =0;
+        int i = 0, j =0, iCount = 0;
 
-        for(i = 1; i <= iRow; i++)
+        for(i = 1; i <= iRow  ; i++)
         {
-            for(j = 1; j <= iCol; j++)
+                iCount = 1;
+            for(j = 1; j <= iCol ; j++)
             {
-                if( i == 1 || i == iRow || j == 1 || j == iCol )
+                if( j== 1 || j == iCol || i == 1 || j == i || i == iRow)        
                 {
-                    System.out.print(j+"\t");
+                    System.out.print(iCount+"\t");
                 }
                 else
                 {
-                    System.out.print("*\t");
+                    System.out.print(" \t");
                 }
+                iCount++;
             }
             System.out.println();
         }
-
     }
 }
 
-public class program30_5
+public class program32_5
 {
     public static void main(String A[])
     {

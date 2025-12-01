@@ -6,17 +6,21 @@ class Pattern
     {
         int i = 0, j =0;
 
-        for(i = 1; i <= iRow; i++)
+        for(i = iRow; i > 0 ; i--)
         {
-            for(j = 1; j <= iCol; j++)
+            for(j = 1; j <= iCol ; j++)
             {
-                if( j >= i )
+                if( j > i )
                 {
-                    System.out.print("*\t");
+                    System.out.print("@\t");
+                }
+                else if(j == i)
+                {
+                    System.out.print("#\t");
                 }
                 else
                 {
-                    System.out.print("#\t");
+                    System.out.print("*\t");
                 }
             }
             System.out.println();
@@ -24,7 +28,7 @@ class Pattern
     }
 }
 
-public class program30_2
+public class program32_2
 {
     public static void main(String A[])
     {
